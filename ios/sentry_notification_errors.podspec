@@ -3,7 +3,7 @@
 # Run `pod lib lint restart_app.podspec` to validate before publishing.
 #
 Pod::Spec.new do |s|
-  s.name             = 'restart_app'
+  s.name             = 'sentry_notification_errors'
   s.version          = '0.0.1'
   s.summary          = 'A new Flutter project.'
   s.description      = <<-DESC
