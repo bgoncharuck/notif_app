@@ -29,7 +29,7 @@ class RestartPlugin : FlutterPlugin, MethodCallHandler {
      */
     override fun onAttachedToEngine(@NonNull flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
         context = flutterPluginBinding.applicationContext
-        channel = MethodChannel(flutterPluginBinding.binaryMessenger, "restart")
+        channel = MethodChannel(flutterPluginBinding.binaryMessenger, "notifError")
         channel.setMethodCallHandler(this)
     }
 
@@ -40,7 +40,7 @@ class RestartPlugin : FlutterPlugin, MethodCallHandler {
      * For any other method call, it sends a 'not implemented' result.
      */
     override fun onMethodCall(@NonNull call: MethodCall, @NonNull result: Result) {
-        if (call.method == "restartApp") {
+        if (call.method == "sentryNotificationErrors") {
             restartApp()
             result.success("ok")
         } else {
