@@ -16,8 +16,6 @@ dependencies:
     sdk: flutter
 
 dev_dependencies:
-  flutter_test:
-    sdk: flutter
 
 flutter:
   plugin:
@@ -25,8 +23,6 @@ flutter:
       android:
         package: gabrimatic.info.restart
         pluginClass: RestartPlugin
-      ios:
-        pluginClass: RestartAppPlugin
       web:
         pluginClass: RestartWeb
         fileName: restart_web.dart
